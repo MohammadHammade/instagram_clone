@@ -11,7 +11,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     {{-- <link rel="dns-prefetch" href="//fonts.gstatic.com"> --}}
     {{-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> --}}
@@ -42,30 +41,30 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-direct nav-link font-weight-bold" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-                                @if (!Auth::user())
-                                <li class="nav-item">
-                                    <span class="nav-direct nav-link font-weight-bold">|</span>
-                                </li>
-                                @endif
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-direct nav-link font-weight-bold" href="{{ route('register') }}"> {{ __('Register') }}</a>
-                                </li>
-                            @endif
+                        @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="nav-direct nav-link font-weight-bold" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        </li>
+                        @endif
+                        @if (!Auth::user())
+                        <li class="nav-item">
+                            <span class="nav-direct nav-link font-weight-bold">|</span>
+                        </li>
+                        @endif
+                        @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-direct nav-link font-weight-bold" href="{{ route('register') }}"> {{ __('Register') }}</a>
+                        </li>
+                        @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-direct font-weight-bold nav-link dropdown-toggle font-weight-bold" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->username }}
-                                </a>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-direct font-weight-bold nav-link dropdown-toggle font-weight-bold" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                {{ Auth::user()->username }}
+                            </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
@@ -75,15 +74,16 @@
                                     </form>
                                 </div>
                             </li>
-                        @endguest
-                    </ul>
+                            @endguest
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
-</body>
+            <main class="py-4">
+                @yield('content')
+            </main>
+        </div>
+        <script src="/js/myjs.js"></script>
+    </body>
 </html>
