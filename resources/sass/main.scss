@@ -1,0 +1,22 @@
+body {
+    background-image: url('/img/body_background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 10000px;
+}
+
+* {
+    font-family: 'Gluten', cursive;
+}
+
+.navbar {
+    // background-color: #6f5a5a70;
+    background-image: linear-gradient(to right, #6f5a5a70, #fed698, #6f5a5a70);
+}
+
+.navbar {
+    .nav-direct {
+        color: rgb(36, 30, 30) !important;
+        font-size: 17px;
+    }
+}

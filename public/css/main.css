@@ -1,0 +1,19 @@
+body {
+  background-image: url("/img/body_background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 10000px;
+}
+
+* {
+  font-family: "Gluten", cursive;
+}
+
+.navbar {
+  background-image: linear-gradient(to right, #6f5a5a70, #fed698, #6f5a5a70);
+}
+
+.navbar .nav-direct {
+  color: #241e1e !important;
+  font-size: 17px;
+}
